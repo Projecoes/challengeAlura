@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA_Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Encriptador</title>
+</head>
+
+<body>
+    <header>
+        <img class="logoAlura" src="./imagens/logo.png" alt="Logo de alura">
+    </header>
+
+    <main>
+        <section>   
+            <textarea class="textArea" cols="41" rows="4" placeholder="Digite seu texto:"></textarea>
+            <div class="aviso">
+                <h6>
+                    Apenas letras minusculas e sem acento.
+                </h6>
+            </div>
+            <div class="botoes">
+                <button class="btnEncriptar" onclick="btnEncriptar()">Criptografar</button>
+                <button class="btnDesencriptar" onclick="btnDesencriptar()">Descriptografar</button>
+            </div>
+
+        </section>
+        
+        <section class="copiar">
+
+            <textarea class="mensagem" cols="20" rows="10"></textarea>
+            <button class="btnCopiar" onclick="btnCopiar()">Copiar</button>
+
+        </section>
+    </main>
+    <script src="scripts.js"></script> 
+</body>
+<footer class="rodape">Desenvolvido por Andrew Coelho</footer>
+
+</html>
