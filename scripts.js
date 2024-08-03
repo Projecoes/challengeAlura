@@ -30,9 +30,9 @@ function encriptar(stringEncriptada) {
 }
 
 function btnDesencriptar() {
-    const textoDesencriptado = desencriptar(textArea.value);
-    mensagem.value = textoDesencriptado;
-    textArea.value = "";
+    const textoDesencriptado = desencriptar(textArea.value); //chamada de funcao
+    mensagem.value = textoDesencriptado; //define o valor da area de texto
+    textArea.value = ""; //limpa o conteudo da area de texto
 }
 
 function desencriptar(stringDesencriptada) {
@@ -43,15 +43,15 @@ function desencriptar(stringDesencriptada) {
         ["o", "ober"],
         ["u", "ufat"]
     ];
-    stringDesencriptada = stringDesencriptada.toLowerCase();
-    for (let i = 0; i < matrizCodigo.length; i++) {
-        if (stringDesencriptada.includes(matrizCodigo[i][1])) {
+    stringDesencriptada = stringDesencriptada.toLowerCase(); //convertendo para letras minusculas 
+    for (let i = 0; i < matrizCodigo.length; i++) {         // iterando elementos da matrizCodigo enquanto o "i" for menor que martrizCodigo
+        if (stringDesencriptada.includes(matrizCodigo[i][1])) { //verifica se stringDesencriptada contém essa string encriptada.
             stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][1],
-                matrizCodigo[i][0]);
+                matrizCodigo[i][0]); //inverte as iteracoes 
 
         }
     }
-    return stringDesencriptada;
+    return stringDesencriptada; //retorna a funcao desencriptada
 }
 
 function btnCopiar(){
